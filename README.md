@@ -1,10 +1,10 @@
 # The Amazon Sticky Note Printer Savior
 
-A method for printing images to an Amazon Sticky Note Printer connected to a LAN.
+A method for printing images to an Amazon Sticky Note Printer via IPP.
 
 For Linux and macOS, the included script will take an image file as an argument,
 perform the necessary conversions, and send it to the Amazon Sticky Note Printer.
-The IP address of the printer must be be entered into the script as the "printerip
+The IP address of the printer must be be entered into the script as the "printerip"
 variable.
 
 For macOS, a shortcut is provided that provides a Finder Quick Action that can be
