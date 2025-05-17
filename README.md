@@ -3,14 +3,14 @@
 A method for printing images to an Amazon Smart Sticky Note Printer via IPP.
 
 For Linux and macOS, the included script will take an image file as an argument,
-perform the necessary conversions, and send it to the Amazon Sticky Note Printer.
+perform the necessary conversions, and send it to the Amazon Smart Sticky Note Printer.
 The IP address of the printer must be be entered into the script as the "printerip"
 variable.
 
 Example usage: `sh stickyprint.sh test.png`
 
 For macOS, the included shortcut provides a Finder Quick Action that can be
-used to send any image file to the Amazon Sticky Note Printer. The IP address of the
+used to send any image file to the Amazon Smart Sticky Note Printer. The IP address of the
 printer must be entered into the "Run Shell Script" section of the shortcut as the
 "printerip" variable.
 
