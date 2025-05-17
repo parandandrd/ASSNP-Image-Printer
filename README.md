@@ -7,6 +7,8 @@ perform the necessary conversions, and send it to the Amazon Sticky Note Printer
 The IP address of the printer must be be entered into the script as the "printerip"
 variable.
 
+Example usage: `sh stickyprint.sh qrcode.png`
+
 For macOS, a shortcut is provided that provides a Finder Quick Action that can be
 used to send any image file to the Amazon Sticky Note Printer. The IP address of the
 printer must be entered into the "Run Shell Script" section of the shortcut as the
