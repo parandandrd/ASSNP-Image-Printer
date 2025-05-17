@@ -43,6 +43,6 @@ useless devices will be able to use this to get some good out of it.
 
 # To-Do
 
-• Improve scaling behavior - add option to keep size for items smaller than 576px.
+• Improve scaling behavior - add option to retain size for items smaller than 576px.
 
 • Add text printing support.
