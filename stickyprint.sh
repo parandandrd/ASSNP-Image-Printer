@@ -42,11 +42,11 @@ echo "ewogIFZFUlNJT04gMi4wCiAgT1BFUkFUSU9OIFByaW50LUpvYgogIFJFUVVFU1QtSUQgNDIKCi
 # $outfile is the processed output.
 #   The BMP3 prefix keeps it from saving as BMP4 or something else that will break on the printer.
 magick "$infile" -resize 576 -monochrome -flip "BMP3:${outfile}"
-echo "Converted file to BMP. Sending to printer..."
+echo "Converted image to BMP. Sending to printer..."
 #
 # Send the $outfile processed image via the $ippfile instructions to the printer at $printerip
 ipptool -f "$outfile" "ipp://${printerip}/" "$ippfile" -v
-echo "Check printer for output"
+echo "Image sent to printer."
 #
 # Cleans up the temp BMP file.
 rm "/tmp/sticky-processed.bmp"
