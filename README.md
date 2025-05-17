@@ -18,7 +18,7 @@ Homebrew on macOS, most Linux distros will have it available as a package).
 The image is always converted to 576 pixels wide (the maximum width of the printer)
 while maintaining aspect ratio.
 
-The Amazon Sticky Note Printer must have previously configured with the Alexa app to
+The Amazon Sticky Note Printer must be configured with the Alexa app to
 connect to your Wi-Fi.
 
 # Background
