@@ -1,6 +1,6 @@
 # The Amazon Sticky Note Printer Savior
 
-A method for printing images to an Amazon Sticky Note Printer via IPP.
+A method for printing images to an Amazon Smart Sticky Note Printer via IPP.
 
 For Linux and macOS, the included script will take an image file as an argument,
 perform the necessary conversions, and send it to the Amazon Sticky Note Printer.
@@ -25,7 +25,7 @@ connect to your Wi-Fi.
 
 # Background
 
-A few years ago, Amazon released this Sticky Note Printer that advertised itself as
+A few years ago, Amazon released this "Smart" Sticky Note Printer that advertised itself as
 being "IPP compatible", but in the real world, no drivers were ever released for the
 printer so it could only be used for the very limited functionality available through
 Alexa.
