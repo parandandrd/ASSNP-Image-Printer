@@ -40,3 +40,8 @@ customer service forums [here](https://www.amazonforum.com/s/question/0D56Q00008
 The script was further refined and integrated into a macOS shortcut for easy access. I'm
 making it available on GitHub in the hope that someone, somewhere, with one of these mostly 
 useless devices will be able to use this to get some good out of it.
+
+# To-Do
+
+• Improve scaling behavior - add option to keep size for items smaller than 576px.
+• Add text printing support.
