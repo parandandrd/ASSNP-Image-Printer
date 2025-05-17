@@ -1,4 +1,4 @@
-# The Amazon Sticky Note Printer Savior
+# The Amazon Smart Sticky Note Printer Savior
 
 A method for printing images to an Amazon Smart Sticky Note Printer via IPP.
 
