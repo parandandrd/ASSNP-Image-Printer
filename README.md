@@ -35,4 +35,7 @@ Back when I was playing with the printer in 2022, I was able to get as far as pr
 plain text, but no further. I recently discovered JessicaJ's script, posted to Amazon's
 customer service forums [here](https://www.amazonforum.com/s/question/0D56Q000084k8NgSAI/how-to-connect-using-internet-printing-protocol-from-windows).
 
+I was able to further refine the script and integrated it into a macOS shortcut for easy
+access.
+
 
