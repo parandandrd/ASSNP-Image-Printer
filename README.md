@@ -25,7 +25,7 @@ connect to your Wi-Fi.
 
 # Background
 
-A few years ago, Amazon released this "Smart" Sticky Note Printer that advertised itself as
+A few years ago, Amazon released this "Smart" Sticky Note Printer that was advertised as
 being "IPP compatible", but in the real world, no drivers were ever released for the
 printer so it could only be used for the very limited functionality available through
 Alexa.
