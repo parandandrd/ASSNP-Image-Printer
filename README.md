@@ -14,11 +14,17 @@ used to send any image file to the Amazon Smart Sticky Note Printer. The IP addr
 printer must be entered into the "Run Shell Script" section of the shortcut as the
 "printerip" variable.
 
-For both the script and shortcut, ImageMagick must be installed (you can get it via
-Homebrew on macOS, most Linux distros will have it available as a package).
-
 The image is always converted to 576 pixels wide (the maximum width of the printer)
 while maintaining aspect ratio.
+
+# System Requirements
+
+ImageMagick and CUPS must be installed. CUPS is already installed on macOS and most
+desktop Linux distributions.
+
+On macOS, ImageMagick is avaialble via HomeBrew.
+
+On Linux, ImageMagick and CUPS should be available via your distribution's package manager.
 
 The Amazon Smart Sticky Note Printer must be configured with the Alexa app to
 connect to your Wi-Fi.
