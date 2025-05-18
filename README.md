@@ -22,7 +22,7 @@ while maintaining aspect ratio.
 ImageMagick and CUPS must be installed. CUPS is already installed on macOS and most
 desktop Linux distributions.
 
-On macOS, ImageMagick is avaialble via [Homebrew](https://brew.sh).
+On macOS, ImageMagick is available via [Homebrew](https://brew.sh).
 
 On Linux, ImageMagick and CUPS should be available via your distribution's package manager.
 
