@@ -30,7 +30,7 @@ being "IPP compatible", but in the real world, no drivers were ever released for
 printer so it could only be used for the very limited functionality available through
 Alexa.
 
-The printer itself is actually available via IPP, however, but can only accept a few
+The printer itself is actually available via IPP, but can only accept a few
 very specific formats: plain text, "reverse-encoded BMP", and some variants of PDF.
 
 Back when I was playing with the printer in 2022, I was able to get as far as printing
