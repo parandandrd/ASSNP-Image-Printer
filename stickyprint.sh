@@ -41,7 +41,7 @@ echo "ewogIFZFUlNJT04gMi4wCiAgT1BFUkFUSU9OIFByaW50LUpvYgogIFJFUVVFU1QtSUQgNDIKCi
 # -flip: vertically flips to get our "reverse-encoded bitmap"
 # $outfile is the processed output.
 #   The BMP3 prefix keeps it from saving as BMP4 or something else that will break on the printer.
-magick "$infile" -resize 576 -monochrome -flip "BMP3:${outfile}"
+convert "$infile" -resize 576 -monochrome -flip "BMP3:${outfile}"
 echo "Converted image to BMP. Sending to printer..."
 #
 # Send the $outfile processed image via the $ippfile instructions to the printer at $printerip
