@@ -26,12 +26,14 @@ while maintaining aspect ratio.
 
 # System Requirements
 
-ImageMagick 6 and CUPS must be installed. CUPS is already installed on macOS and most
-desktop Linux distributions.
+ImageMagick (6 or 7) and CUPS must be installed. CUPS is already installed on macOS and
+most desktop Linux distributions. The script auto-detects which ImageMagick version is
+installed, preferring the `magick` command (ImageMagick 7) and falling back to `convert`
+(ImageMagick 6) if `magick` isn't found.
 
-On macOS, ImageMagick 6 is available via [Homebrew](https://brew.sh).
+On macOS, ImageMagick is available via [Homebrew](https://brew.sh).
 
-On Linux, ImageMagick 6 and CUPS should be available via your distribution's package manager.
+On Linux, ImageMagick and CUPS should be available via your distribution's package manager.
 
 The ASSNP must be configured with the Alexa app to
 connect to your Wi-Fi.

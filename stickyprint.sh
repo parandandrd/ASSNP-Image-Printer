@@ -13,7 +13,7 @@
 #          section intact, appending your own information as appropriate for any modifications you made to the script)
 #
 # Requisites:
-# - Imagemagick, because how else are you going to process images
+# - ImageMagick (6 or 7), because how else are you going to process images
 ###############################
 #  S E T T I N G S
 #
@@ -50,12 +50,22 @@ if [[ "$printerip" == "PRINTER IP ADDRESS" ]]; then
   exit 1
 fi
 
-for cmd in convert ipptool; do
-  if ! command -v "$cmd" >/dev/null 2>&1; then
-    echo "Error: required command '$cmd' not found. See README for requisites." >&2
-    exit 1
-  fi
-done
+if ! command -v ipptool >/dev/null 2>&1; then
+  echo "Error: required command 'ipptool' not found. See README for requisites." >&2
+  exit 1
+fi
+
+# ImageMagick 7 renamed the CLI to "magick" and dropped the standalone
+# "convert" binary on many installs; ImageMagick 6 only has "convert".
+# Prefer "magick" when present, fall back to "convert" for IM6.
+if command -v magick >/dev/null 2>&1; then
+  im_cmd=(magick)
+elif command -v convert >/dev/null 2>&1; then
+  im_cmd=(convert)
+else
+  echo "Error: required command 'magick' or 'convert' not found. See README for requisites." >&2
+  exit 1
+fi
 
 #
 # Set up the IPP file. Use base64decode.com to see it for yourself if you don't trust this <3
@@ -68,7 +78,7 @@ echo "ewogIFZFUlNJT04gMi4wCiAgT1BFUkFUSU9OIFByaW50LUpvYgogIFJFUVVFU1QtSUQgNDIKCi
 # -flip: vertically flips to get our "reverse-encoded bitmap"
 # $outfile is the processed output.
 #   The BMP3 prefix keeps it from saving as BMP4 or something else that will break on the printer.
-convert "$infile" -resize 576 -monochrome -flip "BMP3:${outfile}"
+"${im_cmd[@]}" "$infile" -resize 576 -monochrome -flip "BMP3:${outfile}"
 echo "Converted image to BMP. Sending to printer..."
 #
 # Send the $outfile processed image via the $ippfile instructions to the printer at $printerip
