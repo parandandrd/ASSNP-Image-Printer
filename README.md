@@ -6,9 +6,15 @@ For Linux and macOS, the included script will take an image file as an argument,
 perform the necessary conversions, and send it to the ASSNP.
 
 The IP address of the printer must be be entered into the script as the "printerip"
-variable.
+variable, or supplied without editing the script via the `PRINTER_IP` environment
+variable or as a second argument.
 
-Example usage: `sh stickyprint.sh test.png`
+Example usage:
+```
+sh stickyprint.sh test.png
+sh stickyprint.sh test.png 192.168.1.200
+PRINTER_IP=192.168.1.200 sh stickyprint.sh test.png
+```
 
 For macOS, the included shortcut provides a Finder Quick Action that can be
 used to send any image file to the ASSNP. The IP address of the

@@ -25,11 +25,38 @@ infile=$1
 outfile="/tmp/sticky-processed.bmp"
 #
 # The printer's IP address. I recommend setting up a static assignment for your own sanity!
-printerip="PRINTER IP ADDRESS"
+# Override without editing this file by exporting PRINTER_IP or passing it as the second argument.
+printerip="${2:-${PRINTER_IP:-PRINTER IP ADDRESS}}"
 #
 # The IPP instruction file to use. This gets created/set using the base64-encoded chunk below, but feel free to replace
 # with your own file if you know what you're doing.
 ippfile="./bitmap.ipp"
+
+set -e
+
+# Basic sanity checks before we touch ImageMagick or the network.
+if [[ -z "$infile" ]]; then
+  echo "Usage: $0 <image file> [printer ip]" >&2
+  exit 1
+fi
+
+if [[ ! -f "$infile" ]]; then
+  echo "Error: input file '$infile' not found." >&2
+  exit 1
+fi
+
+if [[ "$printerip" == "PRINTER IP ADDRESS" ]]; then
+  echo "Error: no printer IP set. Edit the 'printerip' variable in this script, export PRINTER_IP, or pass it as the second argument." >&2
+  exit 1
+fi
+
+for cmd in convert ipptool; do
+  if ! command -v "$cmd" >/dev/null 2>&1; then
+    echo "Error: required command '$cmd' not found. See README for requisites." >&2
+    exit 1
+  fi
+done
+
 #
 # Set up the IPP file. Use base64decode.com to see it for yourself if you don't trust this <3
 # Alternatively just fill out the $ippfile specified above yourself and remove this line:
@@ -49,4 +76,4 @@ ipptool -f "$outfile" "ipp://${printerip}/" "$ippfile" -v
 echo "Image sent to printer."
 #
 # Cleans up the temp BMP file.
-rm "/tmp/sticky-processed.bmp"
+rm -f "$outfile"
